@@ -75,7 +75,7 @@ class Country extends React.Component {
 
                     </div>
                     {this.state.loading ? (
-                        <div>Loading...</div>
+                        <p className="loading">Loading...</p>
                     ) : (
                             <div className="container-container">{listData.map(country => {
                                 console.log('DATES: ', country.dates, 'COUNTRY: ', country.country);
