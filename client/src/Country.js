@@ -1,8 +1,12 @@
 import React from "react";
+import SearchBox from './Searchbox'
 
 class Country extends React.Component {
     state = {
-        loading: true
+        loading: true,
+        data: [], 
+        filteredData: []
+
     }
 
     async componentDidMount() {
@@ -15,24 +19,42 @@ class Country extends React.Component {
             loading: false
             // deaths: data.deaths[0],
             // recovered: data.recovered[0]
-        }))
-        
+        })) 
     }
+
+    filterData = (query) => {        
+        const data = this.state.data.filter(item => {            
+          const regex = new RegExp(query, 'gi');
+          if(item.country) {
+            return item.country.match(regex)
+          }
+        });
+        this.setState(() => {
+          return { filteredData: data }
+        })
+      }
+
     render() {
+
+        const listData = this.state.filteredData.length > 0 ? this.state.filteredData : this.state.data;
+    
         return (
             <div>
+                <SearchBox searchFilter={this.filterData}/>
                 {this.state.loading ? ( 
                 <div>Loading...</div> 
                 ) : (
-                <div>{this.state.data.map(country => {
+                <div>{listData.map(country => {
+                    const deathRate = (country.deaths/country.confirmed*100);
                     return(
-                    <ul>
+                    <div>
+                        <h3>{country.country}</h3>
+                        <p>Confirmed: {country.confirmed}</p>
+                        <p>Deaths: {country.deaths}</p>
+                        <p>Recovered: {country.recovered}</p>
+                        <p>Death rate: { deathRate === 0 ? deathRate : deathRate.toFixed(2)}%</p><br/>
 
-                        <li>{country.country}</li>
-                        <li>{country.confirmed}</li>
-                        <li>{country.deaths}</li>
-                        <li>{country.recovered}</li>
-                    </ul>)})}
+                    </div>)})}
                     </div>
                 //<div>{this.state.confirmed.location.latest}</div>
                 //<div>{this.state.deaths.location.latest}</div>
@@ -44,39 +66,4 @@ class Country extends React.Component {
 }
 export default Country;
 
-//     state = {
-//         postData: [],
-//         filteredPosts: [],
-//     }
 
-//     async updateData() {
-//         const response = await axios.get('https://coronavirus-tracker-api.herokuapp.com/deaths');
-//         const data = await response.json();
-//         const result = data.locations.map(location => {
-//             return {
-//                 country: location.country,
-//                 latest: location.latest
-//             }
-//         })
-//         this.setState(() => ({ postData: result }))
-//         console.log('RESULT 123: ', result);
-        
-//     }
-
-//     componentDidMount() {
-//         this.updateData();
-//     }
-
-//     render() {
-//         return (
-//             <div className='country'>
-//                 <h3>{this.props.country}</h3>
-//                 <a href={this.props.latest}>{this.props.url}</a>
-//                 <p>{this.props.date}</p>
-//             </div>
-//         );
-//     }
-// }
-
-
-// export default Country;

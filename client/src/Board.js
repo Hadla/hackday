@@ -25,6 +25,8 @@ class Board extends Component {
       this.updateData();
     }
 
+
+    
     render() {
 
         const result = this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.postData;
