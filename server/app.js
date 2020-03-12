@@ -15,6 +15,8 @@ app.get('/confirmed', async function (req, res) {
     //   res.json(dataJSON);
     const confirmedResponse = await fetch('https://coronavirus-tracker-api.herokuapp.com/confirmed')
     const confirmedData = await confirmedResponse.json();
+    const confirmedDatesResponse = await fetch('https://coronavirus-tracker-api.herokuapp.com/confirmed')
+    const confirmedDatesData = await confirmedDatesResponse.json();
     const deathResponse = await fetch('https://coronavirus-tracker-api.herokuapp.com/deaths')
     const deathData = await deathResponse.json();
     const recoveredResponse = await fetch('https://coronavirus-tracker-api.herokuapp.com/recovered')
@@ -22,12 +24,13 @@ app.get('/confirmed', async function (req, res) {
 
     const deathResult = deathData.locations.map(location => {
       return {
-        deaths: location.latest
+        deaths: location.latest,
+        dates: location.history
       }
     })  
     const recoveredResult = recoveredData.locations.map(location => {
       return {
-        recovered: location.latest
+        recovered: location.latest,
       }
     })
     const confirmedResult = confirmedData.locations.map((location, index) => {
@@ -36,6 +39,7 @@ app.get('/confirmed', async function (req, res) {
         confirmed: location.latest,
         deaths: deathResult[index].deaths,
         recovered: recoveredResult[index].recovered,
+
 
       }
     })

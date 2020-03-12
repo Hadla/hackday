@@ -1,0 +1,54 @@
+* {
+    background-color: rgb(34, 33, 39);
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+.corona-title {
+    text-align: center;
+
+}
+.searchbox-container{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+
+}
+
+.container-container{
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+.country-container {
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    padding-left: 10px;
+    background-color: seashell;
+
+}
+.country-info {
+    background-color: seashell;
+    color: black;
+
+}
+
+.searchbox {
+    background-color: white;
+    margin: 0 auto;
+    color: black;
+    width: 200px;
+    height: 20px;
+    font-size: 15px;
+
+}

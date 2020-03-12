@@ -9,7 +9,7 @@ class Searchbox extends Component {
   render() {
     return (
       <form className="form" >
-        <input placeholder='Search' type="text" onChange={(e) => {
+        <input className="searchbox" placeholder='Search' type="text" onChange={(e) => {
             this.props.searchFilter(e.target.value)
             // this.setState({ text: e.target.value },
             // () => this.props.searchFilter(this.state.text)
