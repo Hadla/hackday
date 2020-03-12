@@ -67,6 +67,12 @@ class Country extends React.Component {
                         <img src="https://www.cdc.gov/coronavirus/2019-ncov/images/symptoms-fever.jpg" class="image" />
                         <img src="https://www.cdc.gov/coronavirus/2019-ncov/images/symptoms-cough.jpg" class="image" />
                         <img src="https://www.cdc.gov/coronavirus/2019-ncov/images/symptoms-shortness-breath.jpg" class="image" />
+                        <h2>Graphs</h2>
+                        <p>These are the latest graphs:</p>
+                        <img src="https://media.nature.com/lw800/magazine-assets/d41586-020-00154-w/d41586-020-00154-w_17764222.png" class="image" />
+                        <img src="https://www.biancoresearch.com/bianco/samples/2020/01/DashVirusQuarantine012820.png" class="image" />
+                        <img src="https://www.nationalgeographic.com/content/dam/science/2020/02/05/wuhan/ngscience-20-coronavirus-compared_ai2html-timeline-standalone-fallback.jpg" class="image" />
+
                     </div>
                     {this.state.loading ? (
                         <div>Loading...</div>
@@ -76,17 +82,34 @@ class Country extends React.Component {
 
                                 const deathRate = (country.deaths / country.confirmed * 100);
                                 return (
-                                    <div className="flip-card">
-                                        <div className="flip-card-inner">
-                                            <div className="country-container" className="flip-card-front">
+                                    <div className="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                        <div className="flipper">
+                                            <div className="country-container" className="front">
+
                                                 <h3 className="country">{country.country}</h3>
-                                                <p className="country-info">Confirmed: {country.confirmed}</p>
-                                                <p className="country-info">Deaths: {country.deaths}</p>
-                                                <p className="country-info">Recovered: {country.recovered}</p>
-                                                <p className="country-info">Death rate: {deathRate === 0 ? deathRate : deathRate.toFixed(2)}% 💀</p><br />
+                                                <div className="box-container">
+                                                    <div className="box">
+                                                        <p className="country-info">Confirmed</p>
+                                                        <span className="country-info-number">{country.confirmed}</span>
+                                                    </div>
+                                                    <div className="box">
+                                                        <p className="country-info">Deaths</p>
+                                                        <span className="country-info-number">{country.deaths}</span>
+                                                    </div>
+                                                    <div className="box">
+                                                        <p className="country-info">Death rate 💀</p>
+                                                        <span className="percent">{deathRate === 0 ? deathRate : deathRate.toFixed(2)}%</span>
+                                                    </div>
+                                                    <div className="box">
+                                                        <p className="country-info">Recovered</p>
+                                                        <span className="recovered">{country.recovered}</span>
+                                                    </div>
+                                                    <br />
+                                                </div>
 
                                             </div>
-                                            <div className="flip-card-back">
+
+                                            <div className="back">
                                                 <h1 className="country-info-story">{country.country}</h1>
                                                 <p className="country-info-story">Today {country.country} have {country.confirmed} confirmed cases, where {country.recovered} have recovered and unfortunately {country.deaths} have died.</p>
                                                 <p className="call-number" className="country-info-story">Call 113113 if you have any symptoms.</p>
@@ -99,14 +122,7 @@ class Country extends React.Component {
 
                             </div>
                         )}
-                    <div className="graphs">
-                        <h2>Graphs</h2>
-                        <p>These are the latest graphs:</p>
-                        <img src="https://media.nature.com/lw800/magazine-assets/d41586-020-00154-w/d41586-020-00154-w_17764222.png" class="image" />
-                        <img src="https://www.biancoresearch.com/bianco/samples/2020/01/DashVirusQuarantine012820.png" class="image" />
-                        <img src="https://www.nationalgeographic.com/content/dam/science/2020/02/05/wuhan/ngscience-20-coronavirus-compared_ai2html-timeline-standalone-fallback.jpg" class="image" />
 
-                    </div>
                 </div>
 
             </div>
