@@ -167,17 +167,21 @@
 
 .country-info-story {
     background-color: #283238;
-
-}
-
-.country-info-story {
     font-size: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 1.5em;
+
 }
 
-.call-number {
-    font-weight: 100;
+
+.phone-number {
+    font-weight: 700;
     text-decoration: underline;
-    font-size: 12px;
+    font-size: 22px;
+    background-color: #283238;
+    color: #b2192b;
+
 }
 
 
@@ -234,6 +238,11 @@
 .back {
     transform: rotateY(180deg);
     background-color: #283238;
+    padding-left: 30px;
+    padding-top: 50px;
+    padding-top: 50px;
+    margin: 0;
+    width: 330px;
 }
 
 

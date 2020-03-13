@@ -109,8 +109,8 @@ class Country extends React.Component {
 
                                             <div className="back">
                                                 <h1 className="country-info-story">{country.country}</h1>
-                                                <p className="country-info-story">Today {country.country} have {country.confirmed} confirmed cases, where {country.recovered} have recovered and unfortunately {country.deaths} have died.</p>
-                                                <p className="call-number" className="country-info-story">Call 113113 if you have any symptoms.</p>
+                                                <p className="country-info-story">Today {country.country} have {country.confirmed} confirmed cases, where {country.recovered} have recovered and {country.deaths} have died.</p>
+                                                <p className="call-number" className="country-info-story">Call <span className="phone-number">113 113</span> if you have any symptoms or questions.</p>
                                             </div>
                                         </div>
                                     </div>
