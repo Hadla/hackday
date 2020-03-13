@@ -1,7 +1,7 @@
 * {
     background-color: #151b20;
     color: white;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
 .loading {
@@ -13,13 +13,13 @@
 .corona-title {
     text-align: center;
     font-size: 50px;
-    font-weight: 900;
+    font-weight: 700;
     margin-bottom: 0;
 }
 .corona-second-title{
     text-align: center;
     font-size: 20px;
-    font-weight: 200;
+    font-weight: 400;
     margin-top: 0;
 }
 
@@ -66,6 +66,9 @@
     align-items: flex-start;
     margin: 0;
     padding: 0;
+    max-height: 575px;
+    overflow: scroll;
+
 }
 
 .country-container {
@@ -219,4 +222,36 @@
 .back {
     transform: rotateY(180deg);
     background-color: #283238;
+}
+
+
+.important-corona {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 50px;
+    line-height: 1.5em;
+}
+
+.graph-container {
+    margin-left: 50px;
+    margin-bottom: 100px;
+    justify-content: space-between;
+}
+
+.graph {
+    height: 200px;
+    margin-bottom: 30px;
+    justify-content: space-evenly;
+    margin-right: 10px;
+}
+
+.bullet-points {
+    font-size: 25px;
+    font-weight: 800;
+    color: #b2192b;
+}
+
+.more-about-corona {
+    font-weight: 700;
+    font-size: 25px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }

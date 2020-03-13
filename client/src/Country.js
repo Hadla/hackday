@@ -67,14 +67,10 @@ class Country extends React.Component {
                         <img src="https://www.cdc.gov/coronavirus/2019-ncov/images/symptoms-fever.jpg" class="image" />
                         <img src="https://www.cdc.gov/coronavirus/2019-ncov/images/symptoms-cough.jpg" class="image" />
                         <img src="https://www.cdc.gov/coronavirus/2019-ncov/images/symptoms-shortness-breath.jpg" class="image" />
-                        <h2>Graphs</h2>
-                        <p>These are the latest graphs:</p>
-                        <img src="https://media.nature.com/lw800/magazine-assets/d41586-020-00154-w/d41586-020-00154-w_17764222.png" class="image" />
-                        <img src="https://www.biancoresearch.com/bianco/samples/2020/01/DashVirusQuarantine012820.png" class="image" />
-                        <img src="https://www.nationalgeographic.com/content/dam/science/2020/02/05/wuhan/ngscience-20-coronavirus-compared_ai2html-timeline-standalone-fallback.jpg" class="image" />
-
                     </div>
                     {this.state.loading ? (
+                        // <div className="hidden-loading-box"></div>
+                        // <div className="hidden-loading-box"></div>
                         <p className="loading">Loading...</p>
                     ) : (
                             <div className="container-container">{listData.map(country => {
@@ -97,7 +93,7 @@ class Country extends React.Component {
                                                         <span className="country-info-number">{country.deaths}</span>
                                                     </div>
                                                     <div className="box">
-                                                        <p className="country-info">Death rate 💀</p>
+                                                        <p className="country-info">Death rate💀</p>
                                                         <span className="percent">{deathRate === 0 ? deathRate : deathRate.toFixed(2)}%</span>
                                                     </div>
                                                     <div className="box">
@@ -124,6 +120,29 @@ class Country extends React.Component {
                         )}
 
                 </div>
+                <div className="important-corona">
+                    <h3 className="more-about-corona">More about the Coronavirus</h3>
+                    <p><span className="bullet-points">1.</span> If you have a runny nose and sputum, you have a common cold </p>
+                    <p><span className="bullet-points">2.</span> Coronavirus pneumonia is a dry cough with no runny nose. </p>
+                    <p><span className="bullet-points">3.</span> This new virus is not heat-resistant and will be killed by a temperature of just 26/27 degrees. It hates the Sun. </p>
+                    <p><span className="bullet-points">4.</span> If someone sneezes with it, it takes about 10 feet before it drops to the ground and is no longer airborne. </p>
+                    <p><span className="bullet-points">5.</span> If it drops on a metal surface it will live for at least 12 hours - so if you come into contact with any metal surface - wash your hands as soon as you can with a bacterial soap. </p>
+                    <p><span className="bullet-points">6.</span> On fabric it can survive for 6-12 hours. normal laundry detergent will kill it. </p>
+                    <p><span className="bullet-points">7.</span> Drinking warm water is effective for all viruses. Try not to drink liquids with ice. </p>
+                    <p><span className="bullet-points">8.</span> Wash your hands frequently as the virus can only live on your hands for 5-10 minutes, but - a lot can happen during that time - you can rub your eyes, pick your nose unwittingly and so on.</p>
+                    <p><span className="bullet-points">9.</span> You should also gargle as a prevention. A simple solution of salt in warm water will suffice. </p>
+                    <p><span className="bullet-points">10.</span> Can't emphasis enough - drink plenty</p>
+                    <br />
+                    <p>The new Coronavirus may not show sign of infection for many days. How can one know if he/she is infected? By the time they have fever and/or cough and go to the hospital, the lung is usually 50% Fibrosis and it's too late. Taiwan experts provide a simple self-check that we can do every morning. Take a deep breath and hold your breath for more than 10 seconds. If you complete it successfully without coughing, without discomfort, stiffness or tightness, etc., it proves there is no Fibrosis in the lungs, basically indicates no infection. In critical time, please self-check every morning in an environment with clean air. Serious excellent advice by Japanese doctors treating COVID-19 cases: Everyone should ensure your mouth & throat are moist, never dry. Take a few sips of water every 15 minutes at least. Why? Even if the virus gets into your mouth, drinking water or other liquids will wash them down through your throat and into the stomach. Once there, your stomach acid will kill all the virus. If you don't drink enough water more regularly, the virus can enter your windpipe and into the lungs. That's very dangerous.</p>
+                </div>
+                <div className="graph-container">
+                <h2>Graphs</h2>
+                <p>These are the latest graphs</p>
+                <img src="https://media.nature.com/lw800/magazine-assets/d41586-020-00154-w/d41586-020-00154-w_17764222.png" className="graph" />
+                <img src="https://www.biancoresearch.com/bianco/samples/2020/01/DashVirusQuarantine012820.png" className="graph" />
+                <img src="https://www.nationalgeographic.com/content/dam/science/2020/02/05/wuhan/ngscience-20-coronavirus-compared_ai2html-timeline-standalone-fallback.jpg" className="graph" />
+                </div>
+
 
             </div>
         )
