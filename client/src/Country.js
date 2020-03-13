@@ -62,8 +62,10 @@ class Country extends React.Component {
                 </div>
                 <div className="about-and-countainer">
                     <div class="info-and-images">
-                        <h2>What is COVID-19</h2>
-                        <p>Cough, fever, respitory problems</p>
+                        <h2 className="what-is-covid">What is COVID-19</h2>
+                        <p className="symptoms">* Fever </p>
+                        <p className="symptoms">* Cough </p>
+                        <p className="symptoms">* Respitory problems</p>
                         <img src="https://www.cdc.gov/coronavirus/2019-ncov/images/symptoms-fever.jpg" class="image" />
                         <img src="https://www.cdc.gov/coronavirus/2019-ncov/images/symptoms-cough.jpg" class="image" />
                         <img src="https://www.cdc.gov/coronavirus/2019-ncov/images/symptoms-shortness-breath.jpg" class="image" />
@@ -133,17 +135,26 @@ class Country extends React.Component {
                     <p><span className="bullet-points">9.</span> You should also gargle as a prevention. A simple solution of salt in warm water will suffice. </p>
                     <p><span className="bullet-points">10.</span> Can't emphasis enough - drink plenty</p>
                     <br />
-                    <p>The new Coronavirus may not show sign of infection for many days. How can one know if he/she is infected? By the time they have fever and/or cough and go to the hospital, the lung is usually 50% Fibrosis and it's too late. Taiwan experts provide a simple self-check that we can do every morning. Take a deep breath and hold your breath for more than 10 seconds. If you complete it successfully without coughing, without discomfort, stiffness or tightness, etc., it proves there is no Fibrosis in the lungs, basically indicates no infection. In critical time, please self-check every morning in an environment with clean air. Serious excellent advice by Japanese doctors treating COVID-19 cases: Everyone should ensure your mouth & throat are moist, never dry. Take a few sips of water every 15 minutes at least. Why? Even if the virus gets into your mouth, drinking water or other liquids will wash them down through your throat and into the stomach. Once there, your stomach acid will kill all the virus. If you don't drink enough water more regularly, the virus can enter your windpipe and into the lungs. That's very dangerous.</p>
+                    <p className="second-paragraph">The new Coronavirus may not show sign of infection for many days. How can one know if he/she is infected? </p>
+                    <p className="second-paragraph">By the time they have fever and/or cough and go to the hospital, the lung is usually 50% Fibrosis and it's too late. Taiwan experts provide a simple self-check that we can do every morning. </p>
+                    <p className="second-paragraph">Take a deep breath and hold your breath for more than 10 seconds. If you complete it successfully without coughing, without discomfort, stiffness or tightness, etc., it proves there is no Fibrosis in the lungs, basically indicates no infection. In critical time, please self-check every morning in an environment with clean air. </p>
+                    <br />
+                    <p className="second-paragraph-title">Serious excellent advice by Japanese doctors treating COVID-19 cases: </p>
+                    <p className="second-paragraph">Everyone should ensure your mouth & throat are moist, never dry. Take a few sips of water every 15 minutes at least. </p>
+                    <p className="second-paragraph">Why? Even if the virus gets into your mouth, drinking water or other liquids will wash them down through your throat and into the stomach. Once there, your stomach acid will kill all the virus. </p>
+                    <p className="second-paragraph">If you don't drink enough water more regularly, the virus can enter your windpipe and into the lungs. That's very dangerous.</p>
                 </div>
                 <div className="graph-container">
                 <h2>Graphs</h2>
                 <p>These are the latest graphs</p>
                 <img src="https://media.nature.com/lw800/magazine-assets/d41586-020-00154-w/d41586-020-00154-w_17764222.png" className="graph" />
                 <img src="https://www.biancoresearch.com/bianco/samples/2020/01/DashVirusQuarantine012820.png" className="graph" />
-                <img src="https://www.nationalgeographic.com/content/dam/science/2020/02/05/wuhan/ngscience-20-coronavirus-compared_ai2html-timeline-standalone-fallback.jpg" className="graph" />
+                <img src="https://ichef.bbci.co.uk/news/624/cpsprodpb/124FF/production/_111070057_coronavirusstockimpact_28022020_dp-nc.png" className="graph" />
+                <img src="https://www.who.int/emergencies/mers-cov/daily-epicurve-republic-of-korea-china-cases-deaths2015-06-21.png?ua=1" className="graph" />
+                <img src="https://www.total-croatia-news.com/images/china_coronavirus_live_15.jpg" className="graph" />
+                <img src="https://content.fortune.com/wp-content/uploads/2020/02/china-inflation-rates-by-category-graph.png?w=1024" className="graph" />
+                <img src="" className="graph" />
                 </div>
-
-
             </div>
         )
     }
